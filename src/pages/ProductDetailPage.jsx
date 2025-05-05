@@ -268,16 +268,16 @@ const ProductDetailPage = () => {
               </div>
             </div>
           </div>
-
           {/* Similar Products */}
           {similarProducts.length > 0 && (
             <section>
               <h2 className="text-xl font-semibold text-slate-900 mb-4">Similar Products</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+              <div>
                 <FeaturedProducts products={similarProducts} />
               </div>
             </section>
           )}
+
         </div>
       </main>
     </>

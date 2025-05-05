@@ -44,8 +44,6 @@ export const FeaturedProducts = ({
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
-  
-
       </div>
     </section>
   );
