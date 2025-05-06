@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
@@ -294,7 +295,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 relative">
-            {categories.slice(0, 5).map((category) => (
+            {categoryStructure.slice(0, 5).map((category) => (
               <div
                 key={category.id}
                 className="relative group"
@@ -321,27 +322,27 @@ const Header = () => {
                       className="absolute top-full left-0 w-96 bg-white shadow-lg rounded-lg p-4 mt-1"
                     >
                       <div className="grid grid-cols-2 gap-4">
-                        {getCategoryStructure(category.id).map(
-                          (subCategory) => (
-                            <div key={subCategory.id}>
-                              <h3 className="font-medium text-slate-900 mb-2">
-                                {subCategory.name}
-                              </h3>
-                              <ul className="space-y-1">
-                                {subCategory.items?.map((item) => (
-                                  <li key={item}>
-                                    <Link
-                                      to={`/category/${category.id}/${subCategory.id}`}
-                                      className="text-sm text-slate-600 hover:text-indigo-600"
-                                    >
-                                      {item}
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          )
-                        )}
+                        {category.subCategories?.map((subCategory) => (
+                          <div key={subCategory.id}>
+                            <h3 className="font-medium text-slate-900 mb-2">
+                              {subCategory.name}
+                            </h3>
+                            <ul className="space-y-1">
+                              {subCategory.items?.map((item) => (
+                                <li key={item}>
+                                  <Link
+                                    to={`/category/${category.id}/${subCategory.id}/${item
+                                      .toLowerCase()
+                                      .replace(/\s+/g, "-")}`}
+                                    className="text-sm text-slate-600 hover:text-indigo-600"
+                                  >
+                                    {item}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
                       </div>
                       <div className="mt-4 border-t pt-4">
                         <Link
@@ -366,7 +367,6 @@ const Header = () => {
 
           {/* Actions */}
           <div className="flex items-center space-x-4">
-            {/* Search */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               className="p-2 rounded-full hover:bg-slate-100 transition-colors"
@@ -375,7 +375,6 @@ const Header = () => {
               <Search size={20} className="text-slate-700" />
             </button>
 
-            {/* Wishlist */}
             <Link
               to="/wishlist"
               className="p-2 rounded-full hover:bg-slate-100 transition-colors"
@@ -383,7 +382,6 @@ const Header = () => {
               <Heart size={20} className="text-slate-700" />
             </Link>
 
-            {/* Cart */}
             <Link
               to="/cart"
               className="p-2 rounded-full hover:bg-slate-100 transition-colors relative"
@@ -396,7 +394,6 @@ const Header = () => {
               )}
             </Link>
 
-            {/* User */}
             <Link
               to="/profile"
               className="p-2 rounded-full hover:bg-slate-100 transition-colors"
@@ -404,7 +401,6 @@ const Header = () => {
               <User size={20} className="text-slate-700" />
             </Link>
 
-            {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2 rounded-full hover:bg-slate-100 transition-colors"
@@ -463,7 +459,7 @@ const Header = () => {
           >
             <div className="container mx-auto px-4 py-4">
               <nav className="flex flex-col space-y-4">
-                {categories.map((category) => (
+                {categoryStructure.map((category) => (
                   <Link
                     key={category.id}
                     to={`/category/${category.id}`}
@@ -502,4 +498,5 @@ const Header = () => {
     </header>
   );
 };
+
 export default Header;

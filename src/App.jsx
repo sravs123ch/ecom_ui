@@ -19,7 +19,8 @@ import Wishlist from "./pages/Wishlist";
 import Orders from "./pages/Orders";
 import HelpSupport from './pages/HelpSupport';
 import Payments from './pages/Payments';
-
+import AuthForm from "./components/login/AuthForm";
+import CheckoutPage from "./pages/CheckOutPage";
 function App() {
   const location = useLocation();
 
@@ -39,10 +40,11 @@ function App() {
           {/* Public routes with footer */}
           <Route path="/home" element={<HomePage />} />
           <Route path="/product/:productId" element={<ProductDetailPage />} />
-          <Route path="/category/:categoryId" element={<CategoryPage />} />
+          <Route path="/category/:categoryId/:subCategoryId?" element={<CategoryPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/category" element={<CategoriesPage />} />
-          
+          <Route path="/login" element={< AuthForm />} />
+          <Route path="/checkout" element={< CheckoutPage />} />
           {/* MainLayout routes (no footer) */}
           <Route path="/" element={<MainLayout />}>
           <Route index element={<Navigate to="/home" replace />} />

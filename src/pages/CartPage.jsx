@@ -178,14 +178,12 @@ const CartPage = () => {
                     </div>
 
                     <Button
-                      as={Link}
-                      to="/checkout"
-                      size="lg"
-                      fullWidth
-                      className="mt-6"
-                    >
-                      Proceed to Checkout
-                    </Button>
+  asChild
+  size="lg"
+  className="mt-6 w-full"
+>
+  <Link to="/checkout">Proceed to Checkout</Link>
+</Button>
 
                     <div className="mt-6 text-center">
                       <p className="text-xs text-slate-500 mb-2">We accept</p>
