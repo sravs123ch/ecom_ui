@@ -10,8 +10,9 @@ import { categories, products, promotions } from '../data/products';
 
 const HomePage = () => {
   const featuredProducts = products.filter(product => product.isFeatured);
-  const newProducts = products.filter(product => product.isNew || Math.random() > 0.5).slice(0, 8);
-  
+  // const newProducts = products.filter(product => product.isNew || Math.random() > 0.5).slice(0, 8);
+  const newProducts = [...products].sort(() => 0.5 - Math.random()).slice(0, 4);
+
   return (
     <>
       <Helmet>

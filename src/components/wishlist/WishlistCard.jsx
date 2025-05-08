@@ -98,7 +98,7 @@ const WishlistCard = ({ item, onRemove, onAddToCart }) => {
       disabled: !item.inStock,
       className: `flex items-center text-sm px-3 py-1.5 rounded-full transition-colors ${
         item.inStock
-          ? 'bg-blue-600 text-white hover:bg-blue-700'
+          ? 'bg-login-gradient text-white'
           : 'bg-gray-200 text-gray-500 cursor-not-allowed'
       }`,
     },

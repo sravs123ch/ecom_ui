@@ -36,13 +36,7 @@ const LoginForm = () => {
         >
           Login
         </button>
-        {/* <p className="my-4">or login with social platforms</p>
-        <div className="flex justify-center">
-          <a href="#" className="inline-flex p-2 border-2 border-gray-300 rounded-lg text-2xl text-gray-800 mx-2"><FcGoogle /></a>
-          <a href="#" className="inline-flex p-2 border-2 border-gray-300 rounded-lg text-2xl text-gray-800 mx-2 text-blue-600"><FaFacebook /></a>
-          <a href="#" className="inline-flex p-2 border-2 border-gray-300 rounded-lg text-2xl text-gray-800 mx-2"><FaGithub /></a>
-          <a href="#" className="inline-flex p-2 border-2 border-gray-300 rounded-lg text-2xl text-gray-800 mx-2 text-blue-700"><FaLinkedin /></a>
-        </div> */}
+       
       </form>
     </div>
   );

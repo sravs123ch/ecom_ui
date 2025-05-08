@@ -32,7 +32,7 @@ const ProfileHeader = ({ user }) => {
   return React.createElement(
     'div',
     {
-      className: 'relative bg-blue-600 text-white p-6 pb-24 rounded-b-3xl shadow-md',
+      className: 'relative bg-login-gradient text-white p-6 pb-24 rounded-b-3xl shadow-md',
     },
     [
       React.createElement(

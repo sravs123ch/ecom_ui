@@ -1,16 +1,13 @@
 import React, { useEffect } from "react";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
-
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
-
 import HomePage from "./pages/HomePage";
 import ProductDetailPage from "./pages/ProductDetailPage";
-import CategoryPage from "./pages/CategoryPage";
+import ProductsListPage from "./pages/ProductsListPage";
 import CartPage from "./pages/CartPage";
 import CategoriesPage from './pages/CategoriesPage';
-
 import MainLayout from "./components/layout/MainLayout";
 import Notifications from "./pages/Notifications";
 import Profile from "./pages/Profile";
@@ -21,6 +18,8 @@ import HelpSupport from './pages/HelpSupport';
 import Payments from './pages/Payments';
 import AuthForm from "./components/login/AuthForm";
 import CheckoutPage from "./pages/CheckOutPage";
+import LoginForm from "./pages/Login1";
+import './style.css';
 function App() {
   const location = useLocation();
 
@@ -40,10 +39,11 @@ function App() {
           {/* Public routes with footer */}
           <Route path="/home" element={<HomePage />} />
           <Route path="/product/:productId" element={<ProductDetailPage />} />
-          <Route path="/category/:categoryId/:subCategoryId?" element={<CategoryPage />} />
+          <Route path="/category/:categoryId/:subCategoryId?" element={<ProductsListPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/category" element={<CategoriesPage />} />
           <Route path="/login" element={< AuthForm />} />
+          <Route path="/loginform" element={< LoginForm />} />
           <Route path="/checkout" element={< CheckoutPage />} />
           {/* MainLayout routes (no footer) */}
           <Route path="/" element={<MainLayout />}>

@@ -1,0 +1,3 @@
+.bg-login-gradient {
+    @apply bg-gradient-to-r from-indigo-500/90 to-indigo-700/90;
+  }
