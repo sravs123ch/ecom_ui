@@ -677,19 +677,6 @@ const ProductDetailPage = () => {
           </div>
         </div>
       </div>
-
-      {/* Share */}
-      <div className="mt-6 flex items-center">
-        <Share2 size={18} className="text-gray-400 mr-2" />
-        <span className="text-sm text-gray-700 mr-4">Share:</span>
-        <div className="flex space-x-2">
-          <button className="text-gray-400 hover:text-blue-600">Facebook</button>
-          <span className="text-gray-300">|</span>
-          <button className="text-gray-400 hover:text-blue-400">Twitter</button>
-          <span className="text-gray-300">|</span>
-          <button className="text-gray-400 hover:text-red-600">Pinterest</button>
-        </div>
-      </div>
     
           </div>
 
