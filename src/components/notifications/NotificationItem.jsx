@@ -2,7 +2,6 @@ import React from 'react';
 import { Bell, Package, Tag, CreditCard, Info, AlertTriangle } from 'lucide-react';
 import { formatRelativeTime } from '../../utils/formatters';
 
-
 const NotificationItem = ({ notification, onMarkAsRead }) => {
   const getIcon = () => {
     const commonProps = { size: 22 };
@@ -18,7 +17,7 @@ const NotificationItem = ({ notification, onMarkAsRead }) => {
       case 'alert':
         return React.createElement(AlertTriangle, { ...commonProps, className: 'text-orange-600' });
       default:
-        return React.createElement(Bell, { ...commonProps, className: 'text-blue-600' });
+        return React.createElement(Bell, { ...commonProps, className: 'text-color' }); // ✅ Applied
     }
   };
 
@@ -53,9 +52,7 @@ const NotificationItem = ({ notification, onMarkAsRead }) => {
               React.createElement(
                 'h3',
                 {
-                  className: `font-medium text-gray-900 ${
-                    !notification.isRead ? 'font-semibold' : ''
-                  }`,
+                  className: `font-medium text-gray-900 ${!notification.isRead ? 'font-semibold' : ''}`,
                   key: 'title',
                 },
                 notification.title
@@ -89,7 +86,7 @@ const NotificationItem = ({ notification, onMarkAsRead }) => {
             React.createElement(
               'button',
               {
-                className: 'text-sm text-blue-600 font-medium mt-2 hover:text-blue-700 transition-colors',
+                className: 'text-sm text-color font-medium mt-2 text-color-hover transition-colors', // ✅ Applied
                 key: 'button'
               },
               'View Details'
@@ -101,7 +98,7 @@ const NotificationItem = ({ notification, onMarkAsRead }) => {
           'div',
           { className: 'ml-2 mt-2', key: 'unread-indicator' },
           React.createElement('div', {
-            className: 'h-2 w-2 rounded-full bg-blue-600'
+            className: 'h-2 w-2 rounded-full bg-primary-500' // ✅ Applied directly
           })
         )
     ]

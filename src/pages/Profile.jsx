@@ -39,7 +39,7 @@ const Profile = () => {
         <div className="mt-6">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-lg font-semibold text-gray-800">My Addresses</h2>
-            <button className="flex items-center text-sm text-blue-600 hover:text-blue-700 transition-colors">
+            <button className="flex items-center text-sm text-color text-color-hover transition-colors">
               <PlusCircle size={16} className="mr-1" />
               <span>Add New</span>
             </button>
@@ -58,13 +58,13 @@ const Profile = () => {
           ) : (
             <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
-                <MapPin size={24} className="text-blue-600" />
+                <MapPin size={24} className="text-color" />
               </div>
               <h3 className="text-gray-800 font-medium mb-2">No saved addresses</h3>
               <p className="text-gray-600 text-sm mb-4">
                 Add a delivery address to streamline your checkout experience.
               </p>
-              <button className="bg-blue-600 text-white py-2 px-4 rounded-lg text-sm hover:bg-blue-700 transition-colors">
+              <button className="bg-color text-white py-2 px-4 rounded-lg text-sm text-color-hover transition-colors">
                 Add a new address
               </button>
             </div>
@@ -75,14 +75,14 @@ const Profile = () => {
           <h2 className="text-lg font-semibold text-gray-800 mb-4">Recent Orders</h2>
           
           <div className="bg-white border border-gray-200 rounded-lg p-6 text-center">
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
-              <MapPin size={24} className="text-blue-600" />
+            <div className="inline-flex items-center justify-center w-12 h-12 bg-color-100 rounded-full mb-4">
+              <MapPin size={24} className="text-color" />
             </div>
             <h3 className="text-gray-800 font-medium mb-2">No recent orders</h3>
             <p className="text-gray-600 text-sm mb-4">
               Your order history will appear here once you've made a purchase.
             </p>
-            <button className="bg-blue-600 text-white py-2 px-4 rounded-lg text-sm hover:bg-blue-700 transition-colors">
+            <button className="bg-color text-white py-2 px-4 rounded-lg text-sm hover:bg-color transition-colors">
               Start shopping
             </button>
           </div>

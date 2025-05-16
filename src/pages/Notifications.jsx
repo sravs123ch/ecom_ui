@@ -42,7 +42,7 @@ const Notifications = () => {
           <>
             <div className="p-4 flex justify-between items-center border-b border-gray-200 bg-white">
               <div className="flex items-center">
-                <Bell size={18} className="text-blue-600 mr-2" />
+                <Bell size={18} className="text-color mr-2" />
                 <span className="font-medium text-gray-800">
                   {unreadCount > 0 
                     ? `${unreadCount} unread notification${unreadCount > 1 ? 's' : ''}` 
@@ -54,7 +54,7 @@ const Notifications = () => {
                 {unreadCount > 0 && (
                   <button 
                     onClick={markAllAsRead}
-                    className="flex items-center text-sm text-blue-600 hover:text-blue-700 transition-colors"
+                    className="flex items-center text-sm text-color text-color-hover transition-colors"
                   >
                     <Check size={16} className="mr-1" />
                     <span>Mark all read</span>
@@ -84,7 +84,7 @@ const Notifications = () => {
         ) : (
           <div className="flex flex-col items-center justify-center pt-12 px-4 text-center">
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-              <Bell size={24} className="text-blue-600" />
+              <Bell size={24} className="text-color" />
             </div>
             <h2 className="text-xl font-semibold text-gray-800 mb-2">No notifications</h2>
             <p className="text-gray-600 max-w-sm">

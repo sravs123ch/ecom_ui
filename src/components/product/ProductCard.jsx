@@ -59,14 +59,14 @@ const ProductCard = ({ product }) => {
           <div className="absolute bottom-2 right-2 flex flex-col gap-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             <button
               onClick={handleWishlistToggle}
-              className={`rounded-full p-2.5 ${isInWishlist(product.id) ? 'bg-indigo-100 text-indigo-600' : 'bg-white text-slate-700 hover:text-indigo-600'} shadow-md transition-colors`}
+              className={`rounded-full p-2.5 ${isInWishlist(product.id) ? 'bg-color text-white' : 'bg-white text-slate-700 hover:text-color'} shadow-md transition-colors`}
               aria-label={isInWishlist(product.id) ? "Remove from wishlist" : "Add to wishlist"}
             >
-              <Heart size={18} className={isInWishlist(product.id) ? "fill-indigo-600" : ""} />
+              <Heart size={18} className={isInWishlist(product.id) ? "fill-text-color" : ""} />
             </button>
             <button
               onClick={handleAddToCart}
-              className="rounded-full bg-white p-2.5 text-slate-700 shadow-md hover:bg-indigo-600 hover:text-white transition-colors"
+              className="rounded-full bg-white p-2.5 text-slate-700 shadow-md hover:bg-color transition-colors"
               aria-label="Add to cart"
             >
               <ShoppingCart size={18} />
@@ -75,18 +75,18 @@ const ProductCard = ({ product }) => {
         </div>
 
         <div className="mt-4">
-          <h3 className="text-sm font-medium text-slate-700 group-hover:text-indigo-600 transition-colors">
+          <h3 className="text-sm font-medium text-slate-700 group-hover:text-color-hover transition-colors">
             {product.name}
           </h3>
           <div className="mt-1 flex items-center justify-between">
             <div className="flex items-center">
               {product.originalPrice ? (
                 <>
-                  <span className="text-sm font-medium text-indigo-600">${product.price.toFixed(2)}</span>
+                  <span className="text-sm font-medium text-color">${product.price.toFixed(2)}</span>
                   <span className="ml-2 text-xs text-slate-500 line-through">${product.originalPrice.toFixed(2)}</span>
                 </>
               ) : (
-                <span className="text-sm font-medium text-indigo-600">${product.price.toFixed(2)}</span>
+                <span className="text-sm font-medium text-color">${product.price.toFixed(2)}</span>
               )}
             </div>
             <div className="flex items-center">

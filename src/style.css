@@ -1,3 +1,27 @@
-.bg-login-gradient {
+/* .bg-login-gradient {
     @apply bg-gradient-to-r from-indigo-500/90 to-indigo-700/90;
+  } */
+
+.bg-color {
+  @apply bg-primary-500;
+}
+.text-color {
+  @apply text-primary-500;
+}
+.text-color-hover {
+  @apply hover:text-primary-500;
+}
+
+.group-hover\:text-color-hover {
+  @apply group-hover:text-primary-500;
+}
+.border-color{
+   @apply border-primary-500;
+}
+
+.peer-checked\:bg-color {
+  @apply peer-checked:bg-primary-500;
+}
+ .custom-focus-ring {
+    @apply focus:ring-primary-500 focus:ring-2 focus:outline-none;
   }

@@ -72,7 +72,7 @@ export const CategorySection = ({ categories, showViewAllLink = true }) => {
           <div className="mt-12 text-center">
             <Link 
               to="/category" 
-              className="inline-flex items-center text-indigo-600 font-medium hover:text-indigo-700 transition-colors"
+              className="inline-flex items-center text-color font-medium hover:text-color transition-colors"
             >
               View All Categories
               <svg 

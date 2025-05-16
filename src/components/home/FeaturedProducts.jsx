@@ -13,12 +13,12 @@ export const FeaturedProducts = ({
         <div className="flex items-center justify-between mb-12">
           <div>
             <h2 className="text-3xl font-bold text-slate-800">{title}</h2>
-            <div className="mt-2 w-24 h-1 bg-indigo-600 rounded-full"></div>
+            <div className="mt-2 w-24 h-1 bg-color rounded-full"></div>
           </div>
           {viewAllLink && (
             <Link 
               to={viewAllLink}
-              className="text-indigo-600 font-medium hover:text-indigo-700 transition-colors flex items-center"
+              className="text-color font-medium hover:text-color transition-colors flex items-center"
             >
               View All
               <svg 

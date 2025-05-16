@@ -32,7 +32,7 @@ const LoginForm = () => {
         </div>
         <button
           type="submit"
-          className="w-full h-12 bg-[#7494ec] rounded-lg shadow-[0_0_10px_rgba(0,0,0,0.1)] border-none cursor-pointer text-white font-semibold text-base"
+          className="w-full h-12 bg-color rounded-lg shadow-[0_0_10px_rgba(0,0,0,0.1)] border-none cursor-pointer text-white font-semibold text-base"
         >
           Login
         </button>

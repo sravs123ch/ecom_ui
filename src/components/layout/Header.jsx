@@ -288,7 +288,7 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-xl font-bold tracking-tight text-indigo-700">
+            <span className="text-xl font-bold tracking-tight text-color">
               ShopHub
             </span>
           </Link>
@@ -305,7 +305,7 @@ const Header = () => {
                 <div className="flex items-center space-x-1 cursor-pointer">
                   <Link
                     to={`/category/${category.id}`}
-                    className="text-sm font-medium text-slate-700 hover:text-indigo-600 transition-colors"
+                    className="text-sm font-medium text-slate-700 text-color-hover transition-colors"
                   >
                     {category.name}
                   </Link>
@@ -334,7 +334,7 @@ const Header = () => {
                                     to={`/category/${category.id}/${subCategory.id}/${item
                                       .toLowerCase()
                                       .replace(/\s+/g, "-")}`}
-                                    className="text-sm text-slate-600 hover:text-indigo-600"
+                                    className="text-sm text-slate-600 text-color-hover"
                                   >
                                     {item}
                                   </Link>
@@ -347,7 +347,7 @@ const Header = () => {
                       <div className="mt-4 border-t pt-4">
                         <Link
                           to={`/category/${category.id}`}
-                          className="text-indigo-600 hover:text-indigo-800 text-sm font-medium"
+                          className="text-color text-color-hover text-sm font-medium"
                         >
                           View All {category.name} →
                         </Link>
@@ -359,7 +359,7 @@ const Header = () => {
             ))}
             <Link
               to="/category"
-              className="text-sm font-medium text-slate-700 hover:text-indigo-600 transition-colors"
+              className="text-sm font-medium text-slate-700 text-color-hover transition-colors"
             >
               All Collections
             </Link>
@@ -388,7 +388,7 @@ const Header = () => {
             >
               <ShoppingCart size={20} className="text-slate-700" />
               {itemCount > 0 && (
-                <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-indigo-600 text-xs text-white">
+                <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-color text-xs text-white">
                   {itemCount}
                 </span>
               )}

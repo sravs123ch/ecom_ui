@@ -1309,11 +1309,11 @@ const CategoryPage = () => {
           <nav className="mb-6">
             <ol className="flex items-center text-sm">
               <li>
-                <Link to="/" className="text-slate-500 hover:text-indigo-600 transition-colors">Home</Link>
+                <Link to="/" className="text-slate-500 hover:text-color transition-colors">Home</Link>
               </li>
               <ChevronRight size={14} className="mx-2 text-slate-400" />
               <li>
-                <Link to="/category" className="text-slate-500 hover:text-indigo-600 transition-colors">Collections</Link>
+                <Link to="/category" className="text-slate-500 hover:text-color transition-colors">Collections</Link>
               </li>
               <ChevronRight size={14} className="mx-2 text-slate-400" />
               <li className="text-slate-900 font-medium capitalize">

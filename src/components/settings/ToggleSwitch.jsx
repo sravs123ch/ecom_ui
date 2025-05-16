@@ -6,21 +6,23 @@ const ToggleSwitch = ({ checked, onChange, label, disabled = false }) => {
     className: 'sr-only peer',
     checked,
     onChange,
-    disabled
+    disabled,
   });
 
-  const trackClasses = `w-11 h-6 rounded-full peer ${
-    disabled ? 'bg-gray-200' : 'bg-gray-300 peer-checked:bg-blue-600'
-  } peer-focus:ring-2 peer-focus:ring-blue-300 transition-colors`;
+  const trackClasses = `w-11 h-6 rounded-full peer transition-colors ${
+    disabled
+      ? 'bg-gray-200'
+      : 'bg-gray-300 peer-checked:bg-color peer-focus:ring-2 custom-focus-ring'
+  }`;
 
   const trackElement = React.createElement('div', {
-    className: trackClasses
+    className: trackClasses,
   });
 
   const thumbElement = React.createElement('div', {
     className: `absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-all ${
       checked ? 'translate-x-5' : 'translate-x-0'
-    }`
+    }`,
   });
 
   const switchWrapper = React.createElement(
@@ -45,7 +47,11 @@ const ToggleSwitch = ({ checked, onChange, label, disabled = false }) => {
 
   return React.createElement(
     'label',
-    { className: 'inline-flex items-center cursor-pointer' },
+    {
+      className: `inline-flex items-center ${
+        disabled ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
+      }`,
+    },
     children
   );
 };

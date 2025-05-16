@@ -48,14 +48,14 @@ const Sidebar = () => {
                   to={item.path}
                   className={`flex items-center px-6 py-3 transition-colors relative ${
                     isActive(item.path)
-                      ? 'text-blue-600 bg-blue-50 font-medium border-r-4 border-blue-600'
+                      ? 'text-color bg-blue-50 font-medium border-r-4 border-color'
                       : 'text-gray-700 hover:bg-gray-50'
                   }`}
                 >
                   <item.icon size={20} className="mr-3" />
                   <span>{item.label}</span>
                   {item.badge && (
-                    <span className="ml-auto bg-red-500 text-white text-xs font-medium rounded-full h-5 w-5 flex items-center justify-center">
+                    <span className="ml-auto bg-color text-white text-xs font-medium rounded-full h-5 w-5 flex items-center justify-center">
                       {item.badge}
                     </span>
                   )}

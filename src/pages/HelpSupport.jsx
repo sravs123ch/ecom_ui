@@ -45,32 +45,32 @@ const HelpSupport = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search for help..."
-              className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             />
             <Search size={20} className="absolute left-4 top-3.5 text-gray-400" />
           </div>
 
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-            <button className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-all group">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                <MessageCircle size={20} className="text-blue-600" />
+            <button className="flex items-center p-4 border border-gray-200 rounded-lg text-color-hover hover:bg-blue-50 transition-all group">
+              <div className="w-10 h-10 bg-color rounded-full flex items-center justify-center">
+                <MessageCircle size={20} className="text-white" />
               </div>
               <div className="ml-4 text-left">
                 <h3 className="font-medium text-gray-900">Live Chat</h3>
                 <p className="text-sm text-gray-600">Chat with our support team</p>
               </div>
-              <ArrowRight size={18} className="ml-auto text-gray-400 group-hover:text-blue-600" />
+              <ArrowRight size={18} className="ml-auto text-gray-400 group-hover:text-color-hover" />
             </button>
 
-            <button className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-all group">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                <Phone size={20} className="text-blue-600" />
+            <button className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-color hover:bg-blue-50 transition-all group">
+              <div className="w-10 h-10 bg-color rounded-full flex items-center justify-center">
+                <Phone size={20} className="text-white" />
               </div>
               <div className="ml-4 text-left">
                 <h3 className="font-medium text-gray-900">Call Us</h3>
                 <p className="text-sm text-gray-600">24/7 toll-free support</p>
               </div>
-              <ArrowRight size={18} className="ml-auto text-gray-400 group-hover:text-blue-600" />
+              <ArrowRight size={18} className="ml-auto text-gray-400 group-hover:text-color-hover" />
             </button>
           </div>
         </div>
@@ -81,10 +81,10 @@ const HelpSupport = () => {
             {faqCategories.map((category) => (
               <button
                 key={category.id}
-                className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-all"
+                className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-color hover:bg-blue-50 transition-all"
               >
                 <div className="flex items-center">
-                  <HelpCircle size={20} className="text-blue-600" />
+                  <HelpCircle size={20} className="text-color" />
                   <div className="ml-3">
                     <h3 className="font-medium text-gray-900">{category.title}</h3>
                     <p className="text-sm text-gray-600">{category.count} articles</p>
@@ -102,10 +102,10 @@ const HelpSupport = () => {
             {commonQuestions.map((question) => (
               <button
                 key={question.id}
-                className="w-full flex items-center justify-between p-3 text-left border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-all"
+                className="w-full flex items-center justify-between p-3 text-left border border-gray-200 rounded-lg hover:border-color hover:bg-blue-50 transition-all"
               >
                 <div className="flex items-center">
-                  <FileText size={18} className="text-blue-600" />
+                  <FileText size={18} className="text-color" />
                   <span className="ml-3 text-gray-700">{question.question}</span>
                 </div>
                 <ChevronRight size={18} className="text-gray-400" />
@@ -116,7 +116,7 @@ const HelpSupport = () => {
 
         <div className="mt-8 text-center">
           <p className="text-gray-600">Still need help?</p>
-          <button className="flex items-center justify-center space-x-2 mx-auto mt-2 text-blue-600 hover:text-blue-700">
+          <button className="flex items-center justify-center space-x-2 mx-auto mt-2 text-color hover:text-color-hover">
             <Mail size={18} />
             <span>Email our support team</span>
           </button>

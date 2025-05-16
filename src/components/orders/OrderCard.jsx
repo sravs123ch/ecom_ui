@@ -29,7 +29,7 @@ const OrderCard = ({ order, onViewDetails }) => {
       <div className="p-4">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center space-x-3">
-            <Package size={20} className="text-blue-600" />
+            <Package size={20} className="text-color" />
             <span className="font-medium text-gray-900">Order #{order.id}</span>
           </div>
           <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${getStatusColor(order.status)}`}>
@@ -69,7 +69,7 @@ const OrderCard = ({ order, onViewDetails }) => {
           </div>
 
           {order.status === 'shipped' && order.trackingNumber && (
-            <div className="mt-2 flex items-center text-sm text-blue-600">
+            <div className="mt-2 flex items-center text-sm text-color">
               <Truck size={16} className="mr-1" />
               <span>Tracking ID: {order.trackingNumber}</span>
             </div>
@@ -78,7 +78,7 @@ const OrderCard = ({ order, onViewDetails }) => {
 
         <div className="mt-4 flex items-center justify-between">
           {order.invoice && (
-            <button className="flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors">
+            <button className="flex items-center text-sm text-gray-600 text-color-hover transition-colors">
               <FileText size={16} className="mr-1" />
               <span>Download Invoice</span>
             </button>
@@ -86,7 +86,7 @@ const OrderCard = ({ order, onViewDetails }) => {
 
           <button
             onClick={() => onViewDetails(order.id)}
-            className="flex items-center text-sm text-blue-600 hover:text-blue-700 transition-colors"
+            className="flex items-center text-sm text-color text-color-hover transition-colors"
           >
             <span>View Details</span>
             <ChevronRight size={16} className="ml-1" />

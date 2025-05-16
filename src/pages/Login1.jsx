@@ -53,7 +53,7 @@ const Auth = () => {
             alt="Fashion"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-login-gradient flex flex-col items-center justify-center p-12">
+          <div className="absolute inset-0 bg-color flex flex-col items-center justify-center p-12">
             {/* Headings */}
             <motion.h2
               className="text-4xl font-bold mb-6 text-white"
@@ -209,13 +209,13 @@ const Auth = () => {
                       <input
                         id="remember-me"
                         type="checkbox"
-                        className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                        className="h-4 w-4 text-color border-gray-300 rounded"
                       />
                       <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700">
                         Remember me
                       </label>
                     </div>
-                    <a href="#" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                    <a href="#" className="text-sm font-medium text-color hover:text-color">
                       Forgot password?
                     </a>
                   </motion.div>
@@ -225,7 +225,7 @@ const Auth = () => {
               {/* Submit button */}
               <motion.button
                 type="submit"
-                className="w-full flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-login-gradient focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
+                className="w-full flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-color focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
                 initial={{ opacity: 0 }}
@@ -246,7 +246,7 @@ const Auth = () => {
               {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
               <button
                 onClick={() => setIsLogin(!isLogin)}
-                className="font-medium text-indigo-600 hover:text-indigo-500 transition-colors"
+                className="font-medium text-color hover:text-color transition-colors"
               >
                 {isLogin ? "Sign up" : "Sign in"}
               </button>

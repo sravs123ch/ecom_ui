@@ -14,13 +14,13 @@ const Footer = () => {
               Discover the latest trends and products at competitive prices. Shop with confidence with our easy returns and secure checkout.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-indigo-400 transition-colors" aria-label="Facebook">
+              <a href="#" className="text-color-hover transition-colors" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="hover:text-indigo-400 transition-colors" aria-label="Instagram">
+              <a href="#" className="text-color-hover transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="hover:text-indigo-400 transition-colors" aria-label="Twitter">
+              <a href="#" className="text-color-hover transition-colors" aria-label="Twitter">
                 <Twitter size={20} />
               </a>
             </div>
@@ -31,19 +31,19 @@ const Footer = () => {
             <h3 className="text-lg font-bold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-slate-300 hover:text-indigo-400 transition-colors">Home</Link>
+                <Link to="/" className="text-slate-300 text-color-hover transition-colors">Home</Link>
               </li>
               <li>
-                <Link to="/collections" className="text-slate-300 hover:text-indigo-400 transition-colors">Collections</Link>
+                <Link to="/collections" className="text-slate-300 text-color-hover transition-colors">Collections</Link>
               </li>
               <li>
-                <Link to="/about" className="text-slate-300 hover:text-indigo-400 transition-colors">About Us</Link>
+                <Link to="/about" className="text-slate-300 text-color-hover transition-colors">About Us</Link>
               </li>
               <li>
-                <Link to="/blog" className="text-slate-300 hover:text-indigo-400 transition-colors">Blog</Link>
+                <Link to="/blog" className="text-slate-300 text-color-hover transition-colors">Blog</Link>
               </li>
               <li>
-                <Link to="/contact" className="text-slate-300 hover:text-indigo-400 transition-colors">Contact</Link>
+                <Link to="/contact" className="text-slate-300 text-color-hover transition-colors">Contact</Link>
               </li>
             </ul>
           </div>
@@ -53,19 +53,19 @@ const Footer = () => {
             <h3 className="text-lg font-bold text-white mb-4">Customer Service</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/faq" className="text-slate-300 hover:text-indigo-400 transition-colors">FAQs</Link>
+                <Link to="/faq" className="text-slate-300 text-color-hover transition-colors">FAQs</Link>
               </li>
               <li>
-                <Link to="/shipping" className="text-slate-300 hover:text-indigo-400 transition-colors">Shipping Information</Link>
+                <Link to="/shipping" className="text-slate-300 text-color-hover transition-colors">Shipping Information</Link>
               </li>
               <li>
-                <Link to="/returns" className="text-slate-300 hover:text-indigo-400 transition-colors">Returns & Exchanges</Link>
+                <Link to="/returns" className="text-slate-300 text-color-hover transition-colors">Returns & Exchanges</Link>
               </li>
               <li>
-                <Link to="/track-order" className="text-slate-300 hover:text-indigo-400 transition-colors">Track Order</Link>
+                <Link to="/track-order" className="text-slate-300 text-color-hover transition-colors">Track Order</Link>
               </li>
               <li>
-                <Link to="/privacy-policy" className="text-slate-300 hover:text-indigo-400 transition-colors">Privacy Policy</Link>
+                <Link to="/privacy-policy" className="text-slate-300 text-color-hover transition-colors">Privacy Policy</Link>
               </li>
             </ul>
           </div>
@@ -75,15 +75,15 @@ const Footer = () => {
             <h3 className="text-lg font-bold text-white mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <MapPin size={18} className="mr-2 mt-0.5 text-indigo-400" />
+                <MapPin size={18} className="mr-2 mt-0.5 text-color" />
                 <span className="text-slate-300">123 Commerce St, Shopping City, SC 12345</span>
               </li>
               <li className="flex items-center">
-                <Phone size={18} className="mr-2 text-indigo-400" />
+                <Phone size={18} className="mr-2 text-color" />
                 <span className="text-slate-300">(123) 456-7890</span>
               </li>
               <li className="flex items-center">
-                <Mail size={18} className="mr-2 text-indigo-400" />
+                <Mail size={18} className="mr-2 text-color" />
                 <span className="text-slate-300">support@shophub.com</span>
               </li>
             </ul>
@@ -102,12 +102,12 @@ const Footer = () => {
                 <input 
                   type="email" 
                   placeholder="Your email address" 
-                  className="flex-grow px-4 py-2 rounded-md text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="flex-grow px-4 py-2 rounded-md text-slate-800 focus:outline-none focus:ring-2 custom-focus-ring"
                   required
                 />
                 <button 
                   type="submit" 
-                  className="bg-indigo-600 text-white px-4 py-2 rounded-md font-medium hover:bg-indigo-700 transition-colors"
+                  className="bg-color text-white px-4 py-2 rounded-md font-medium transition-colors"
                 >
                   Subscribe
                 </button>

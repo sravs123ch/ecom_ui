@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import  Badge  from "../ui/Badge";
-import  Button  from "../ui/Button";
+import Badge from "../ui/Badge";
+import Button from "../ui/Button";
 import { motion } from "framer-motion";
 import { ShieldCheckIcon } from "lucide-react";
 
@@ -36,10 +36,7 @@ export const Newsletter = () => {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <Badge
-                    variant="default"
-                    className="bg-white text-indigo-700 mb-4"
-                  >
+                  <Badge variant="default" className="bg-white text-color mb-4">
                     Stay Updated
                   </Badge>
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
@@ -185,9 +182,11 @@ export const Newsletter = () => {
                       </div>
 
                       <div className="flex flex-col sm:flex-row gap-4">
-                        <Button type="submit" size="lg" fullWidth>
+                        <Button type="submit" size="lg" fullWidth
+                        >
                           Join & Get 15% Off
                         </Button>
+                      
                         <Button
                           type="button"
                           variant="outline"
@@ -213,11 +212,11 @@ export const Newsletter = () => {
 
                       <p className="text-xs text-slate-500 mt-4">
                         By subscribing, you agree to our{" "}
-                        <a href="#" className="underline hover:text-indigo-700">
+                        <a href="#" className="underline hover:text-color">
                           Terms of Service
                         </a>{" "}
                         and{" "}
-                        <a href="#" className="underline hover:text-indigo-700">
+                        <a href="#" className="underline hover:text-color">
                           Privacy Policy
                         </a>
                         . Unsubscribe at any time.

@@ -66,7 +66,7 @@ const Payments = () => {
           <p className="text-gray-600 mt-1">Manage your payment options</p>
         </div>
 
-        <div className="bg-login-gradient rounded-lg p-6 mb-6">
+        <div className="bg-color rounded-lg p-6 mb-6">
           <div className="flex items-start justify-between">
             <div>
               <p className="text-blue-100 text-sm">Available Balance</p>

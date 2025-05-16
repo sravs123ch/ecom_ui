@@ -717,7 +717,7 @@ export const products: Product[] = [
       reliability: "97%"
     }
   },
-  // You can follow this exact pattern for the rest of the products...
+ 
   {
     id: "p4",
     name: "Floral A-Line Summer Dress",
